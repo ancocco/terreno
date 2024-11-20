@@ -5290,7 +5290,7 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-size: cover;
 }
 .backtri {
-    background-image: url("../images/terreno/terrenoback.jpg");
+    background-image: url("../images/terrenoback.jpg");
     background-position:top;
     background-repeat:no-repeat;
     background-size:contain;
