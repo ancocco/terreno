@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Terreno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <div class="page-logo">
+            <img src="images/ilterreno.jpg" class="img-fluid-height" />
+        </div>
+        
+    </div>
+    <div class="jumbotron text-center backtri">
+        <div class="aci"><h3><button id="mypHa" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('aci')">Acido</button></h3></div>
+        <div class="calc"><h3><button id="mypHb" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('calc')">Calcareo</button></h3></div>
+        <div class="arg"><h3><button id="myArg" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('arg')">Argilloso</button></h3></div>
+        <div class="lim"><h3><button id="myLim" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('lim')">Limoso</button></h3></div>
+        <div class="sab"><h3><button id="mySab" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('sab')">Sabbioso</button></h3></div>
+        <p>&nbsp;</p>
+    </div>
+
+    <div class="container">
+
+        <div id="myDIV" style="background-color:cornsilk">Com’è il tuo terreno?</div>
+
+        <script>
+            function myFunction(name) {
+                var x = document.getElementById("myDIV");
+                if (name == "arg") {
+                    alert("I terreni argillosi hanno una buona capacità di ritenzione idrica grazie alla loro elevata coesione e alla piccola dimensione delle particelle. Tuttavia, questa stessa caratteristica può anche portare a problemi di drenaggio, rendendo questi terreni predisposti a asfissia radicale, soprattutto in condizioni di eccesso di umidità. La forte ritenzione degli elementi nutritivi, ma scarsamente mobili porta alla necessità di un'accurata fertilizzazione. Se poi è presente una componente calcarea la concimazione del fosforo dev'essere localizzata. Sono terreni predisposti alla formazione di crepe del suolo e all’erosione in terreni declivi. In genere i terreni argillosi son di difficile lavorazione. L'aggiunta di sostanza organica ne migliora la struttura.");
+                    x.innerHTML = "I terreni argillosi hanno una buona capacità di ritenzione idrica grazie alla loro elevata coesione e alla piccola dimensione delle particelle. Tuttavia, questa stessa caratteristica può anche portare a problemi di drenaggio, rendendo questi terreni predisposti a asfissia radicale, soprattutto in condizioni di eccesso di umidità. La forte ritenzione degli elementi nutritivi, ma scarsamente mobili porta alla necessità di un'accurata fertilizzazione. Se poi è presente una componente calcarea la concimazione del fosforo dev'essere localizzata. Sono terreni predisposti alla formazione di crepe del suolo e all’erosione in terreni declivi. In genere i terreni argillosi son di difficile lavorazione. L'aggiunta di sostanza organica ne migliora la struttura.";
+                    document.getElementById("myClay").style.display = "block";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                } else if (name == "lim") {
+                    alert("I terreni limosi sono caratterizzati dalla scarsa mobilità degli elementi; risultano spesso mal strutturati, poco permeabili e facili al ristagno. Presentano facilità alla formazione di una crosta superficiale e notevole zollosità. L’aggiunta di sostanza organica migliora la struttura del terreno.");
+                    x.innerHTML = "I terreni limosi sono caratterizzati dalla scarsa mobilità degli elementi; risultano spesso mal strutturati, poco permeabili e facili al ristagno. Presentano facilità alla formazione di una crosta superficiale e notevole zollosità. L’aggiunta di sostanza organica migliora la struttura del terreno.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "block";
+                    document.getElementById("mySand").style.display = "none";
+                } else if (name == 'sab') {
+                    alert("I terreni sabbiosi sono molto permeabili e l’elevata mobilità dei nutrienti rende necessario, soprattutto per l’azoto ed il potassio, il frazionamento della concimazione. La notevole aerazione indirizza i processi evolutivi della sostanza organica verso una rapida mineralizzazione con consistenti rilasci di nutrienti concentrati però in tempi relativamente brevi e non sempre coincidenti con le esigenze colturali delle piante.");
+                    x.innerHTML = "I terreni sabbiosi sono molto permeabili e l’elevata mobilità dei nutrienti rende necessario, soprattutto per l’azoto ed il potassio, il frazionamento della concimazione. La notevole aerazione indirizza i processi evolutivi della sostanza organica verso una rapida mineralizzazione con consistenti rilasci di nutrienti concentrati però in tempi relativamente brevi e non sempre coincidenti con le esigenze colturali delle piante.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "block";
+                } else if (name == "calc") {
+                    alert("I terreni calcarei possono rendere il ferro difficile da assimilare. Alcune specie ne risentono, ad esempio le acidofile.");
+                    x.innerHTML = "I terreni calcarei possono rendere il ferro difficile da assimilare. Alcune specie ne risentono, ad esempio le acidofile.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myCalc").style.display = "block";
+                    document.getElementById("myAci").style.display = "none";
+                } else if (name == "aci") {
+                    alert("I terreni acidi.");
+                    x.innerHTML = "I terreni acidi.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myCalc").style.display = "none";
+                    document.getElementById("myAci").style.display = "block";
+                } else {
+                    x.innerHTML = "Com’è il tuo terreno?";
+                }
+            }
+        </script>
+        <div id="myClay" style="display:none">
+            <h3>Terreno argilloso</h3>
+            <p style="text-indent:2%">
+                I terreni argillosi tendono al ristagno, sono pesanti e di difficile lavorazione, ma trattengono facilmente la sostanza organica.
+            </p>
+            <p style="text-indent:2%">
+                Arricchire il terreno con materia organica, quali residui di erba, foglie triturate, compost, letame e vangatura e
+                ripetere ogni anno, eseguire un’analisi se è necessario per individuare criticità nutrizionali o di pH.
+            </p>
+            <p style="text-indent:2%">
+                Le specie arbore da bosco naturalmente arricchiscono il suolo di sostanza organica e si potrebbe ipotizzare un sistema di coltura agroforestale.
+            </p>
+            <p style="text-indent:2%">
+                La prevalenza di argilla in combinazione con limo e sabbia può dar luogo a terreni <strong>argilloso limoso</strong> e <strong>argilloso sabbioso</strong>, mentre al prevalere delle due
+                frazioni più grossolane si avrà un terreno limoso argilloso e sabbioso argilloso.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/prodotto/ulmus-minor-olmo-campestre/" target="_blank"><i>Ulmus Minor</i> Olmo campestre</a> specie termofila e eliofila</br>
+                <a href="https://vivaifrappetta.it/prodotto/alnus-glutinosa-ontano-nero/" target="_blank"><i>Alnus glutinosa</i> ontano nero</a> grandi miglioratori di suoli umidi, poveri e degradati. Lungo i corsi d’acqua mitigano esondazioni e perdita di suolo.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-cerris-cerro/Quercus" target="_blank">
+                    <i>Quercus cerris</i> cerro
+                </a> - Sopravvive in terreni poveri e argillosi e sopporta i venti forti ma non quelli marittimi.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-pubescens-roverella/" target="_blank">
+                    <i>Quercus pubescens</i> roverella
+                </a> zone mediterranee con clima di tipo subumido a variante fresca.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-frainetto/" target="_blank"><i>Quercus frainetto Ten.</i> Farnetto</a>Scopo conservazionistico in Italia centrale e meridionale.</br>
+                <a href="https://vivaifrappetta.it/prodotto/aesculus-hippocastanum-ippocastano-castagno-dindia/" target="_blank"><i>Aesculus hippocastanum</i> castagno d'India</a> richiede spazi ampi e buon drenaggio.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/cotoneaster/" target="_blank">Cotoneaster</a> - portamento arbustivo o prostrato.</br>
+                <a href="https://vivaifrappetta.it/prodotto/spiraea-nipponica-snowmound/" target="_blank"><i>Spiraea nipponica</i> ‘Snowmound’</a> portamento arbustivo adatto a siepi.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/tassi/" target="_blank">Tasso</a> - Richiede la presenza di umidità atmosferica, si presta a tutte le forme di potatura.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/corns/" target="_blank">Cornus</a> arbusti ornamentali adatte al verde urbano.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/tigli/"><i>Tilia platyphyllos</i> tiglio nostrano</a> Suoli freschi, profondi e nutrienti a pH neutro in boschi montani e umidi, nel verde urbano richiede spazio e volume.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/siepi/pyracantha/" target="_blank">Pyrachanta</a> - siepe e consolidamento suoli.</br>
+                <a href="https://vivaifrappetta.it/prodotto/taxodium-distichum-cipresso-calvo/" target="_blank"><i>Taxodium disticum</i> Cipresso calvo</a> vive anche in condizioni di ristagno idrico come palludi.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/cipressi/" target="_blank">Cipresso</a> si adatta anche a terreni inquinati (<i>Cupressum pyramidalis</i> e' il piu' comune per termofilia e xerofilia).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/noci/" target="_blank">Noce</a> richiede suolo profondo, ben drenato e ricco di sostanza organica.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-meli/" target="_blank">Melo</a> evitando eccessi di argilla, calcare e pH.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-peri/" target="_blank">Pero</a> evitando eccessi di argilla, calcare e pH.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-susini/" target="_blank">Susino</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/melo-cotogno/" target="_blank"><i>Cydonia vulgaris</i> melo cotogno</a> solo irrigazioni di soccorso.</br>
+                <a href="https://vivaifrappetta.it/prodotto/vite-moscato-di-terracina/" target="_blank">Vitis vinifera</a> Moscato di Terracina su terreno con una componente argillosa.</br>
+            </p>
+            </br>
+        </div>
+        <div id="mySilt" style="display:none">
+            <h3>Terreno limoso</h3>
+            <p style="text-indent:2%">
+                I terreni limosi sono meno fini di quelli argillosi, ma non grossolani come i terreni sabbiosi. Il terreno è di medio impasto e spesso definito terriccio.
+            </p>
+            <p style="text-indent:2%">
+                Questo terreno di origine alluvionale si può arricchire con materia organica. Il pH è tendenzialmente neutro e particolarmente adatto alla coltivazione di ortaggi.
+                Essendo terreni facili al ristagno si consiglia di piantare su rialzi e proteggere il terreno dall’erosione con siepi e alberi a rapida crescita.
+            </p>
+            <p style="text-indent:2%">
+                La gradazione del colore varia dal chiaro allo scuro con l’aumentare della sostanza organica.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-meli/" target="_blank"><i>Malus</i> Melo</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-peri/" target="_blank">Pero</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-susini/" target="_blank">Susino</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-peschi/" target="_blank">Pesco</a> innestato su franco e ishtara.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-albicocchi/" target="_blank">Albicocco</a> innestato su ishtara.</br>
+                <a href="https://vivaifrappetta.it/prodotto/melo-cotogno/" target="_blank"><i>Cydonia vulgaris</i> melo cotogno</a> solo irrigazioni di soccorso.</br>
+                <a href="https://vivaifrappetta.it/prodotto/vite-moscato-di-terracina/" target="_blank">Vitis vinifera</a> Moscato di Terracina.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-ciliegi/" target="_blank"><i>Prunus avium</i> Ciliegio</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/agrumi/" target="_blank">Agrumi</a> generalmente i terreni da preferire sono di medio impasto, con una incidenza del 15-20% di argilla, 15-20% di limo, 40-60% di sabbia, 5-9% di calcare totale e con una buona dotazione di scheletro.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/cipressi/" target="_blank">Cipresso</a> si adatta anche a terreni inquinati e anche aridi (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-cerris-cerro/Quercus" target="_blank">
+                    <i>Quercus cerris</i> cerro
+                </a> - Sopravvive in terreni poveri e argillosi e sopporta i venti forti ma non quelli marittimi (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-pubescens-roverella/" target="_blank">
+                    <i>Quercus pubescens</i> roverella
+                </a> zone mediterranee con clima di tipo subumido a variante fresca (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-frainetto/" target="_blank"><i>Quercus frainetto Ten.</i> Farnetto</a>Scopo conservazionistico in Italia centrale e meridionale.</br>
+                <a href="https://vivaifrappetta.it/prodotto/ulmus-minor-olmo-campestre/" target="_blank"><i>Ulmus Minor</i> Olmo campestre</a> specie termofila e eliofila (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/tigli/"><i>Tilia platyphyllos</i> tiglio nostrano</a> Suoli freschi, profondi e nutrienti a pH neutro in boschi montani e umidi, nel verde urbano richiede spazio e volume.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/rose/rose-rampicanti/" target="_blank">Rose</a> (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/bambu/" target="_blank">Phyllostachys aurea Bambu</a> (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/oleandri/" target="_blank">Nerium oleander oleandro</a> zone seche (siepi, alberello).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/aceri/" target="_blank">Aceri</a> Acero campestre (siepi), acero opale.</br>
+                <a href="https://vivaifrappetta.it/prodotto/carpinus-betulus-pyramidalis/" target="_blank"><i>Carpinus betulus</i> carpino bianco</a> miglioratrice del terreno richiede estati calde, luoghi ombreggiati, terreni umidi manon idromorfi (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/alnus-glutinosa-ontano-nero/" target="_blank"><i>Alnus glutinosa</i> ontano nero</a> grandi miglioratori di suoli umidi, poveri e degradati. Lungo i corsi d’acqua mitigano esondazioni e perdita di suolo.</br>
+                <a href="https://vivaifrappetta.it/prodotto/populus-nigra-pioppo-nero-cipressino-italico/" target="_blank"><i>Populus nigra</i> pioppo nero</a> terreni idromorfi (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/salici/" target="_blank">salici</a> zona riparia e terreni idromorfi.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/noccioli/" target="_blank"><i>Corylus colurna</i> nocciolo</a> terreno tendenzialmente sciolto.</br>
+                <a href="https://vivaifrappetta.it/prodotto/juglans-regia-noce-comune-europeo/" target="_blank"><i>Juglans regia</i> noce</a> la <i>J. nigra non tollera i terrreni leggermente calcare.</i></br>
+                <a href="https://vivaifrappetta.it/prodotto/noce-pecan/" target="_blank"><i>Carya illinoensis</i> noce pecan</a> terreno ben drenato.</br>
+                <a href="https://vivaifrappetta.it/prodotto/magnolia-grandiflora-goliath/" target="_blank"><i>Magnolia grandiflora</i> magnolia</a> preferisce terreni fertili, profondi di medio impasto, ben drenati, ricchi di sostanza organica e leggermente acidi.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/siepi/pyracantha/" target="_blank">Pyrachanta</a> - siepe e consolidamento suoli.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/corns/" target="_blank">Cornus</a> ornamentali adatte al verde urbano.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/tassi/" target="_blank">Tasso</a> - Richiede la presenza di umidità atmosferica, si presta a tutte le forme di potatura.</br>
+                <a href="https://vivaifrappetta.it/prodotto/cercidiphyllum-japonicum-rotfuchs/" target="_blank"><i>Cercidiphyllum japonicum</i> Rotfuchs</a> terreno profondo e fresco, pH neutro o acido.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/mimose/" target="_blank">Mimose</a> tollerano la siccità.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/siepi/fotinie/" target="_blank">Fotinie</a> terreni ben drenati e ricchi di sostanza organica (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/abelie/" target="_blank">Abelie</a> terreni ben drenati e ricchi di sostanza organica (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/liquidambar/" target="_blank">Liquidambar</a> terreni umidi, ricchi, sciolti e ben drenati, molto profondi.</br>
+            </p>
+            <h2>Terreno alluvionale e umido</h2>
+            <p>
+                Terreni con falde acquifere superficiali, ricchi di sostanza organica, freschi e profondi con precipitazioni annue 400mm e 40mm nel periodo estivo.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-robur-quercia-comune-farnia/" target="_blank"><i>Quercus robur</i> farnia.</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-coccinea-quercia-rossa/" target="_blank"><i>Quercus coccinea</i> quercia rossa</a> abbondanti precipitazioni.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-coccinea-quercia-rossa/" target="_blank"><i>Quercos palustris</i> quercia palustre</a> abbondanti precipitazioni e zone a rischio inquinamento.</br>
+                <a href="https://vivaifrappetta.it/prodotto/carpinus-betulus-pyramidalis/" target="_blank"><i>Carpinus betulus</i> carpino bianco</a> miglioratrice del terreno richiede estati calde, luoghi ombreggiati, terreni umidi manon idromorfi (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/aceri/" target="_blank">Aceri</a> Acero campestre e trilobo.</br>
+                <a href="https://vivaifrappetta.it/prodotto/fagus-sylvatica-purpurea-mayor/" target="_blank"><i>Fagus Sylvatica</i> faggio</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/fraxinus-ornus-orniello/" target="_blank"><i>Fraxinus ornus</i> orniello</a> </br>
+                <a href="https://vivaifrappetta.it/prodotto/fraxinus-excelsior-frassino-maggiore/" target="_blank"><i>Fraxinus excelsior</i> frassino maggiore ha racidi profonde ed espanse che temono l'asfissia.</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/tigli/"><i>Tilia platyphyllos</i> tiglio nostrano</a> Suoli freschi, profondi e nutrienti a pH neutro in boschi montani e umidi, nel verde urbano richiede spazio e volume.</br>
+                <a href="https://vivaifrappetta.it/prodotto/platanus-acerifolia-platano-comune/" target="_blank">Platano comune</a>.
+                <a href="https://vivaifrappetta.it/prodotto/ulmus-minor-olmo-campestre/" target="_blank"><i>Ulmus Minor</i> Olmo campestre</a> specie termofila e eliofila</br>
+                <a href="https://vivaifrappetta.it/prodotto/alnus-glutinosa-ontano-nero/" target="_blank"><i>Alnus glutinosa</i> ontano nero</a> grandi miglioratori di suoli umidi, poveri e degradati. Lungo i corsi d’acqua mitigano esondazioni e perdita di suolo.</br>
+                <a href="https://vivaifrappetta.it/prodotto/populus-nigra-pioppo-nero-cipressino-italico/" target="_blank"><i>Populus nigra</i> pioppo nero</a> terreni idromorfi (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/salici/" target="_blank">salici</a> zona riparia e terreni idromorfi.</br>
+
+                <a href="https://vivaifrappetta.it/prodotto/populus-alba-pyramidalis-pioppo-bianco-piramidale/" target="_blank"><i>Populus alba</i> pioppo bianco.</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/ginkgo/" target="_blank"><i>Ginkgo biloba</i></a>.
+            </p>
+        </div>
+        <div id="mySand" style="display:none">
+            <h2>Terreno sabbioso</h2>
+            <p>
+                I terreni sabbiosi sono leggeri e molto drenanti. Spesso nei litorali marittimi, ma anche su rocce madri granitiche.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/palme-e-simili/" target="_blank">Cycas</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/hibiscus/" target="_blank"><i>Hibiscus syriacus</i>Ibisco di Siria</a> siepi o alberetto.</br>
+                <a href="https://vivaifrappetta.it/prodotto/yucca-flaccida-golden-sword/" target="_blank">Yucca</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/oleandri/" target="_blank">Nerium oleander oleandro</a> siepi o alberetto.</br>
+                <a href="https://vivaifrappetta.it/prodotto/callistemon-citrinus-splendens/" target="_blank">Callistemom</a> cespulio o alberetto.</br>
+                <a href="https://vivaifrappetta.it/prodotto/leptospermum-scoparium/" target="_blank">Leptospermium</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/myrtus-communis-mirto-mortella/" target="_blank">Mirto</a> consolidamento suolo e siepe.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/ginepri/" target="_blank">Ginepro</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/piante-grasse/" target="_blank">Euphorbie</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/agave-americana/" target="_blank">Agave</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/aloe-arborescens/" target="_blank">Aloe</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/opuntia-ficus-indica-fico-dindia/" target="_blank"><i>Opuntia ficus indica</i> fico d'india</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/alnus-glutinosa-ontano-nero/" target="_blank"><i>Alnus glutinosa</i> ontano nero</a> grandi miglioratori di suoli umidi, poveri e degradati. Lungo i corsi d’acqua mitigano esondazioni e perdita di suolo.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-melograni/" target="_blank">Melograno</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/vite-moscato-bianco-vitis-vinifera-moscato-bianco/" target="_blank"><i>Vitis vinifera</i> moscato bianco</a>
+                <a href="https://vivaifrappetta.it/prodotto/vite-malvasia-del-lazio/" target="_blank"><i>Vitis vinifera</i> malvasia</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-fichi/" target="_blank"><i>Ficus carica sativa</i> fico</a> preferisce temperature tra i 30 e 38&deg; e un
+                terreno ben drenato e ricco di sostanze organiche. Un terreno sabbioso può essere migliorato con l'aggiunta di compost o letame ben decomposto per aumentare la fertilità e la ritenzione dell'umidità.</br>
+                <a href="https://vivaifrappetta.it/prodotto/rhamnus-alaternus-alaterno/" target="_blank"><i>Rhamnus alaternus</i> alaterno</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/lagerstroemia-indica-rosea/" target="_blank"><i>Lagerstroemia indica </i></a></br>
+                <a href="https://vivaifrappetta.it/prodotto/verbena-bonariensis/" target="_blank"><i>Verbena bonariensis</i></a> terreno leggero, nutriente e ben drenato (siepi).</br>
+            </p>
+            <h2>Terreni leggeri e freschi, senza o poco calcare</h2>
+            <p>
+                Terreni sabbioso-argillosi sono leggeri, freschi e ben drenati con buona ritenzione idrica, contengono sabbia silicatica o non derivante da rocce calcare.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-su/" target="_blank"><i>Quercus suber</i> sughera</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-ilex-leccio/" target="_blank"><i>Quercus hilex</i> leccio</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-cerris-cerro/Quercus" target="_blank">
+                    <i>Quercus cerris</i> cerro
+                </a> - Sopravvive in terreni poveri e argillosi e sopporta i venti forti ma non quelli marittimi (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-pubescens-roverella/" target="_blank">
+                    <i>Quercus pubescens</i> roverella
+                </a> zone mediterranee con clima di tipo subumido a variante fresca (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-frainetto/" target="_blank"><i>Quercus frainetto Ten.</i> Farnetto</a>Scopo conservazionistico in Italia centrale e meridionale.</br>
+                <a href="https://vivaifrappetta.it/prodotto/corbezzolo-arbutus-unedo/" target="_blank"><i>Arbutus unedo</i> Corbezzolo</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/phillyrea-angustifolia-fillirea/" target="_blank"><i>Phyllirea angustifolia</i> filliree</a> (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/myrtus-communis-mirto-mortella/" target="_blank">Mirto</a> consolidamento suolo e siepe.</br>
+                <a href="https://vivaifrappetta.it/prodotto/rhamnus-alaternus-alaterno/" target="_blank"><i>Rhamnus alaternus</i> alaterno</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/pinus-pinea-pino-domestico/" target="_blank"><i>Pinus pinea</i> pino domestico</a> terreni ben drenati, sabbiosi e freschi, nono tollera la salsedine.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/ginepri/" target="_blank">Ginepri</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/magnolia-grandiflora-goliath/" target="_blank"><i>Magnolia grandiflora</i> magnolia</a> preferisce terreni fertili, profondi di medio impasto, ben drenati, ricchi di sostanza organica e leggermente acidi.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/corns/" target="_blank">Cornus</a> arbusti ornamentali adatte al verde urbano.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/viburni/" target="_blank">Viburni</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-imbricaria/" target="_blank"><i>Quercus imbricaria</i></a> terreno ben drenato tra i 100 e 700 mls. Ha foglie simili a quelle dell'alloro.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/tassi/" target="_blank">Tasso</a> - Richiede la presenza di umidità atmosferica, si presta a tutte le forme di potatura.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/rampicanti/gelsomini/" target="_blank">Gelsomini</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/clematis-tangutica-armandii/" target="_blank"><i>Clematis armandii</i> clematide sempreverde</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/melo-cotogno/" target="_blank"><i>Cydonia vulgaris</i> melo cotogno</a> solo irrigazioni di soccorso.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-melograni/" target="_blank">Melograno</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/kaki/" target="_blank">Kaki</a>
+            </p>
+        </div>
+        <div id="myCalc" style="display:none">
+            <h2>Terreno calcareo</h2>
+            <p>
+                Terreni poco profondi in regime di umidità tendente all’arido, hanno proprietà che li mantengono asciutti o secchi per prolungati periodi dell'anno. Terreni di colore chiaro che a media profondità accumulano
+                argille, carbonati, silice, sali e/o gesso portando all’aumentano dei livelli di calcare attivo. L’eccesso di calcare attivo provoca la carenza di ferro.
+            </p>
+            <p>
+                La clorosi ferrica si manifesta in foglie sbiadite tendente al bianco nelle zone internervali e periferiche. Tale segno indica fotosintesi rallentata a causa della mancanza di ferro.
+            </p>
+            <p>La clorosi ferrica colpisce anche specie frutticole come pero, pesco, actinidia e, in misura minore, vite; l’unico modo per superare questo problema è la scelta di portinnesti resistenti.</p>
+            <p>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-pubescens-roverella/" target="_blank">
+                    <i>Quercus pubescens</i> roverella
+                </a> zone mediterranee con clima di tipo subumido a variante fresca.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-pubescens-roverella/" target="_blank">
+                    <i>Quercus pubescens</i> roverella
+                </a> zone mediterranee con clima di tipo subumido a variante fresca.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-ilex-leccio/" target="_blank"><i>Quercus hilex</i> leccio</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/aceri/" target="_blank">Aceri</a> Acero campestre, trilobo e opalo.</br>
+                <a href="https://vivaifrappetta.it/prodotto/cotoneaster-horizontalis/" target="_blank"><i>il cotoneaster horizontalis</i></a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/siepi/bossi/" target="_blank">Bosso</a> (siepi).</br>
+                <a href="https://vivaifrappetta.it/prodotto/prunus-serrulata-amanogawa-ciliegio-da-fiore-fastigiato/" target="_blank"><i>Prunus serrulata</i> ‘Amanogawa’ ciliegio da fiore fastigiato.</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/aesculus-hippocastanum-ippocastano-castagno-dindia/" target="_blank"><i>Aesculus hippocastanum</i> castagno d'India</a> richiede spazi ampi e buon drenaggio.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/noccioli/" target="_blank"><i>Corylus colurna</i> nocciolo</a> terreno tendenzialmente sciolto.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/tamerici/" target="_blank">Tamerici</a> sole e caldo.</br>
+                <a href="https://vivaifrappetta.it/prodotto/cedrus-atlantica-cedro-dell-atlante/" target="_blank"><i>Cedrus atlantica</i> Cedro dell'Atlante</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/cipressi/" target="_blank">Cipresso</a> si adatta anche a terreni inquinati (<i>Cupressum pyramidalis</i> e' il piu' comune per termofilia e xerofilia).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/olivi/" target="_blank">Olivo</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/oleandri/" target="_blank">Nerium oleander oleandro</a> zone seche (siepi, alberello).</br>
+                <a href="https://vivaifrappetta.it/prodotto/weigelia-bristol-ruby-2/" target="_blank">Weigelia</a> (arbusto).</br>
+                <a href="https://vivaifrappetta.it/prodotto/lavanda-lavandula-stoechas/" target="_blank"><i>Lavandula stoechas</i> lavanda</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/ligustrum-jonandrum-ligustro/" target="_blank"><i>Ligustrum jonandrum</i> ligustro</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/corns/" target="_blank">Cornus</a> arbusti ornamentali adatte al verde urbano.</br>
+                <a href="https://vivaifrappetta.it/prodotto/rhamnus-alaternus-alaterno/" target="_blank"><i>Rhamnus alaternus</i> alaterno</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/sophora-japonica-regent/" target="_blank"><i>Sophora japonica</i> sofora o acacia del Giappone.</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/prunus-spinosa-prugnolo/" target="_blank">Prugnolo</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/noci/" target="_blank">Noce</a> richiede suolo profondo, ben drenato e ricco di sostanza organica.</br>
+                <a href="https://vivaifrappetta.it/prodotto/gelso-rosa/" target="_blank">Gelso</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutti-di-bosco/more/" target="_blank">More</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/eriobotrya-japonica-nespolo-del-giappone/" target="_blank">Nespolo giapponese</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-melograni/" target="_blank">Melograno</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-mandorli/" target="_blank"><i>Prunus dulcis</i> mandorlo</a> tollera fino al 12% di calcare attivo.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-peschi/" target="_blank">Pesco</a> innestato su mandorlo.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-fichi/" target="_blank"><i>Ficus carica sativa</i> fico</a> preferisce temperature tra i 30 e 38&deg; e un terreno ben drenato e ricco di sostanze organiche.</br>
+                <a href="https://vivaifrappetta.it/prodotto/vite-moscato-bianco-vitis-vinifera-moscato-bianco/" target="_blank"><i>Vitis vinifera</i> moscato bianco</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/vite-sangiovese-vitis-vinifera-sangiovese/" target="_blank"><i>Vitis vinifera</i> sangiovese</a></br>
+            </p>
+        </div>
+        <div id="myAci" style="display:none">
+            <h2>Terreno acido</h2>
+            <p>
+                incostruzione
+            </p>
+        </div>
+        <footer></br></br><i>Work in progress</i></footer></br>
+    </div>
+</body>
+</html>
