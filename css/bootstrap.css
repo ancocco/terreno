@@ -5289,43 +5289,6 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-position:bottom center;
     background-size: cover;
 }
-
-.backz {
-    background-image: url("../images/assam/brahmaputra.jpg");
-}
-.backr {
-    background-image: url("../images/airpm/dailypollution.jpg");
-}
-.backpmdelhi {
-    background-image: url("../images/airpm/meanstdaug.jpg");
-}
-.backpmdelhiw {
-    background-image: url("../images/airpm/insanity.jpg");
-}
-.backt {
-    background-image: url("../images/terreno/ricefields.jpg");
-}
-.backc {
-    background-image: url("../images/assam/waterfall3.jpg");
-}
-.backv {
-    background-image: url("../images/vihar/yamuna.jpg");
-}
-.backmsg {
-    background-image: url("../images/bg_4.jpg");
-}
-.backcompo {
-    background-image: url("../images/sustain/compoback.jpg");
-}
-.backcompoh {
-    background-image: url("../images/sustain/compobackh.jpg");
-}
-.backwsave {
-    background-image: url("../images/sustain/watersave.jpg");
-}
-.backcompoph {
-    background-image: url("../images/sustain/compobackph.jpg");
-}
 .backtri {
     background-image: url("../images/terreno/terrenoback.jpg");
     background-position:top;
