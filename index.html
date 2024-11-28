@@ -42,18 +42,21 @@
                     document.getElementById("myClay").style.display = "block";
                     document.getElementById("mySilt").style.display = "none";
                     document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myAci").style.display = "none";
                 } else if (name == "lim") {
                     alert("I terreni limosi sono caratterizzati dalla scarsa mobilità degli elementi; risultano spesso mal strutturati, poco permeabili e facili al ristagno. Presentano facilità alla formazione di una crosta superficiale e notevole zollosità. L’aggiunta di sostanza organica migliora la struttura del terreno.");
                     x.innerHTML = "I terreni limosi sono caratterizzati dalla scarsa mobilità degli elementi; risultano spesso mal strutturati, poco permeabili e facili al ristagno. Presentano facilità alla formazione di una crosta superficiale e notevole zollosità. L’aggiunta di sostanza organica migliora la struttura del terreno.";
                     document.getElementById("myClay").style.display = "none";
                     document.getElementById("mySilt").style.display = "block";
                     document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myAci").style.display = "none";
                 } else if (name == 'sab') {
                     alert("I terreni sabbiosi sono molto permeabili e l’elevata mobilità dei nutrienti rende necessario, soprattutto per l’azoto ed il potassio, il frazionamento della concimazione. La notevole aerazione indirizza i processi evolutivi della sostanza organica verso una rapida mineralizzazione con consistenti rilasci di nutrienti concentrati però in tempi relativamente brevi e non sempre coincidenti con le esigenze colturali delle piante.");
                     x.innerHTML = "I terreni sabbiosi sono molto permeabili e l’elevata mobilità dei nutrienti rende necessario, soprattutto per l’azoto ed il potassio, il frazionamento della concimazione. La notevole aerazione indirizza i processi evolutivi della sostanza organica verso una rapida mineralizzazione con consistenti rilasci di nutrienti concentrati però in tempi relativamente brevi e non sempre coincidenti con le esigenze colturali delle piante.";
                     document.getElementById("myClay").style.display = "none";
                     document.getElementById("mySilt").style.display = "none";
                     document.getElementById("mySand").style.display = "block";
+                    document.getElementById("myAci").style.display = "none";
                 } else if (name == "calc") {
                     alert("I terreni calcarei possono rendere il ferro difficile da assimilare. Alcune specie ne risentono, ad esempio le acidofile.");
                     x.innerHTML = "I terreni calcarei possono rendere il ferro difficile da assimilare. Alcune specie ne risentono, ad esempio le acidofile.";
@@ -63,8 +66,8 @@
                     document.getElementById("myCalc").style.display = "block";
                     document.getElementById("myAci").style.display = "none";
                 } else if (name == "aci") {
-                    alert("I terreni acidi.");
-                    x.innerHTML = "I terreni acidi.";
+                    alert("Ad un pH inferiore a 6,5 si parla di terreno acido. Alcune piante acidofile vogliono valori bassi, compresi tra 4,5 e 5 (rododendri, azalee, ortensie, mirtilli, eriche…). Un pH al di sotto di 4 rende l’insediamento delle piante quasi nullo.");
+                    x.innerHTML = "Ad un pH inferiore a 6,5 si parla di terreno acido. Alcune piante acidofile vogliono valori bassi, compresi tra 4,5 e 5 (rododendri, azalee, ortensie, mirtilli, eriche…). Un pH al di sotto di 4 rende l’insediamento delle piante quasi nullo.";
                     document.getElementById("myClay").style.display = "none";
                     document.getElementById("mySilt").style.display = "none";
                     document.getElementById("mySand").style.display = "none";
@@ -78,7 +81,8 @@
         <div id="myClay" style="display:none">
             <h3>Terreno argilloso</h3>
             <p style="text-indent:2%">
-                I terreni argillosi tendono al ristagno, sono pesanti e di difficile lavorazione, ma trattengono facilmente la sostanza organica.
+                I terreni argillosi tendono al ristagno, sono pesanti e di difficile lavorazione, ma trattengono facilmente la sostanza organica con cui forma degli aggregati stabili umo-argillosi. 
+                Il miglioramento strutturale che ne consegue contrasta i fenomeni di compattamento, crepacciatura estiva ed erosione nei terreni declivi.
             </p>
             <p style="text-indent:2%">
                 Arricchire il terreno con materia organica, quali residui di erba, foglie triturate, compost, letame e vangatura e
@@ -129,7 +133,7 @@
                 Essendo terreni facili al ristagno si consiglia di piantare su rialzi e proteggere il terreno dall’erosione con siepi e alberi a rapida crescita.
             </p>
             <p style="text-indent:2%">
-                La gradazione del colore varia dal chiaro allo scuro con l’aumentare della sostanza organica.
+                La gradazione del colore varia dal chiaro allo scuro con l’aumentare della sostanza organica diminuendo corrispondentemente la formazione di croste superficiali o altri strati impermeabili.
             </p>
             <p>
                 <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-meli/" target="_blank"><i>Malus</i> Melo</a></br>
@@ -200,6 +204,9 @@
             <h2>Terreno sabbioso</h2>
             <p>
                 I terreni sabbiosi sono leggeri e molto drenanti. Spesso nei litorali marittimi, ma anche su rocce madri granitiche.
+            </p>
+            <p>
+                L’arricchimento di sostanza organica nei terreni sabbiosi aumenta la capacità di trattenuta idrica, impedendo il dilavamento dei nutrienti.
             </p>
             <p>
                 <a href="https://vivaifrappetta.it/categoria-prodotto/palme-e-simili/" target="_blank">Cycas</a></br>
@@ -303,11 +310,39 @@
                 <a href="https://vivaifrappetta.it/prodotto/vite-moscato-bianco-vitis-vinifera-moscato-bianco/" target="_blank"><i>Vitis vinifera</i> moscato bianco</a></br>
                 <a href="https://vivaifrappetta.it/prodotto/vite-sangiovese-vitis-vinifera-sangiovese/" target="_blank"><i>Vitis vinifera</i> sangiovese</a></br>
             </p>
-        </div>
+        </div>        
         <div id="myAci" style="display:none">
             <h2>Terreno acido</h2>
             <p>
-                incostruzione
+                Qualsiasi tipo di terreno non calcareo che si trovi in pianura, collina o montagna, ricco di sostanza organica, profondo e poggia su una roccia madre non calcarea.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/prodotto/sequoiadendron-giganteum-sequoia-della-california/" target="_blank">Sequoia</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/ginkgo/" target="_blank"><i>Ginkgo biloba</i></a></br>
+                <a href="https://vivaifrappetta.it/prodotto/mimosa-acacia-dealbata-turner/" target="_blank">Mimosa</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/abies-nordmanniana-abete-del-caucaso/" target="_blank">Abies nordmanniana abete del Caucaso</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/abeti/" target="_blank">Abeti</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/cipressi/" target="_blank">Cipressi</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/aesculus-hippocastanum-ippocastano-castagno-dindia/" target="_blank"><i>Aesculus hippocastanum</i> castagno d'India</a> richiede spazi ampi e buon drenaggio.</br>
+                <a href="https://vivaifrappetta.it/prodotto/carpinus-betulus-pyramidalis/" target="_blank"><i>Carpinus betulus</i> carpino bianco</a> miglioratrice del terreno richiede estati calde, luoghi ombreggiati, terreni umidi manon idromorfi (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/liquidambar/" target="_blank">Liquidambar</a> terreni umidi, ricchi, sciolti e ben drenati, molto profondi.</br>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-cerris-cerro/Quercus" target="_blank">
+                    <i>Quercus cerris</i> cerro
+                </a> - Sopravvive in terreni poveri e argillosi e sopporta i venti forti ma non quelli marittimi.</br>
+                <a href="https://vivaifrappetta.it/prodotto/fagus-sylvatica-purpurea-mayor/" target="_blank"><i>Fagus Sylvatica</i> faggio</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/arbusti-acidofile/" target="_blank">Acidofile</a> camelie, gardenie, la pieris japonica, camelie, azalee, ortensie, agrumi e gardenie,</br>
+                <a href="https://vivaifrappetta.it/prodotto/hydrangea-macrophylla-ortensia/" target="_blank">Ortensie</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/lonicera-japonica-chinensis/" target="_blank"><i>Lonicera pileata</i>Caprifoglio del Giappone</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/hibiscus/" target="_blank">Hibiscus</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/conifere/ginepri/" target="_blank">Ginepri</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/cotoneaster/" target="_blank">Cotoneaster</a> - portamento arbustivo o prostrato.</br>
+                <a href="https://vivaifrappetta.it/prodotto/rhododendron-rododendro/" target="_blank">Rododendro</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/rampicanti/gelsomini/" target="_blank">Gelsomini</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/arbusti/loropetalum/" target="_blank"><i>Loropetalum</i></a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutti-di-bosco/lamponi/" target="_blank">Lampone</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/corbezzolo-arbutus-unedo/" target="_blank"><i>Arbutus unedo</i> Corbezzolo</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutticole-kiwi/" target="_blank"><i>Actinidia chinensis</i> kiwi</a></br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/frutticole/frutti-di-bosco/mirtilli/" target="_blank">Mirtillo</a></br>
             </p>
         </div>
         <footer></br></br><i>Work in progress</i></footer></br>
