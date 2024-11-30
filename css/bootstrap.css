@@ -5297,13 +5297,18 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 .aci {
     position: relative;
-    left: -16em;
+    left: -19em;
     top: 3em;
 }
 .arg {
     position:relative;
-    left:-3em;
-    top:-5em;
+    left:-6em;
+    top:-4em;
+}
+.bru {
+    position:relative;
+    left: 30em;
+    top: -13em;
 }
 .lim {
     position: relative;
@@ -5314,12 +5319,12 @@ a.badge-dark:focus, a.badge-dark.focus {
 .sab {
     position: relative;
     left: -3em;
-    top: 9em;
+    top: 12em;
 }
 .calc {
     position: relative;
-    left: -16em;
-    top: 10em;
+    left: -19em;
+    top: 14em;
 }
 @media (min-width: 576px) {
     .jumbotron {
