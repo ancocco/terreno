@@ -5326,6 +5326,11 @@ a.badge-dark:focus, a.badge-dark.focus {
     left: -19em;
     top: 14em;
 }
+.coll {
+    position: relative;
+    left: 30em;
+    top: 7em;
+}
 @media (min-width: 576px) {
     .jumbotron {
     padding: 4rem 2rem;
