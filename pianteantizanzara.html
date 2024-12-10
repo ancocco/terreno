@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Terreno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <div class="page-logo">
+            <img src="images/ilterreno.jpg" class="img-fluid-height" />
+        </div>
+        
+    </div>
+    <div class="jumbotron text-center backtri">
+        <div class="aci"><h3><button id="mypHa" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('aci')">Acido</button></h3></div>
+        <div class="calc"><h3><button id="mypHb" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('calc')">Calcareo</button></h3></div>
+        <div class="arg"><h3><button id="myArg" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('arg')">Argilloso</button></h3></div>
+        <div class="lim"><h3><button id="myLim" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('lim')">Limoso</button></h3></div>
+        <div class="sab"><h3><button id="mySab" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('sab')">Sabbioso</button></h3></div>
+        <div class="bru"><h3><button id="myBrl" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('bru')">Brullo</button></h3></div>
+        <div class="coll"><h3><button id="myCol" style="border-style:none;background-color:white;border-color:white;outline:none" onclick="myFunction('col')">Collina</button></h3></div>
+        <p>&nbsp;</p>
+    </div>
+
+    <div class="container">
+
+        <div id="myDIV" style="background-color:cornsilk">Com’è il tuo terreno?</div>
+
+        <script>
+            function myFunction(name) {
+                var x = document.getElementById("myDIV");
+                if (name == "arg") {
+                    alert("I terreni argillosi hanno una buona capacità di ritenzione idrica grazie alla loro elevata coesione e alla piccola dimensione delle particelle. Tuttavia, questa stessa caratteristica può anche portare a problemi di drenaggio, rendendo questi terreni predisposti a asfissia radicale, soprattutto in condizioni di eccesso di umidità. La forte ritenzione degli elementi nutritivi, ma scarsamente mobili porta alla necessità di un'accurata fertilizzazione. Se poi è presente una componente calcarea la concimazione del fosforo dev'essere localizzata. Sono terreni predisposti alla formazione di crepe del suolo e all’erosione in terreni declivi. In genere i terreni argillosi son di difficile lavorazione. L'aggiunta di sostanza organica ne migliora la struttura.");
+                    x.innerHTML = "I terreni argillosi hanno una buona capacità di ritenzione idrica grazie alla loro elevata coesione e alla piccola dimensione delle particelle. Tuttavia, questa stessa caratteristica può anche portare a problemi di drenaggio, rendendo questi terreni predisposti a asfissia radicale, soprattutto in condizioni di eccesso di umidità. La forte ritenzione degli elementi nutritivi, ma scarsamente mobili porta alla necessità di un'accurata fertilizzazione. Se poi è presente una componente calcarea la concimazione del fosforo dev'essere localizzata. Sono terreni predisposti alla formazione di crepe del suolo e all’erosione in terreni declivi. In genere i terreni argillosi son di difficile lavorazione. L'aggiunta di sostanza organica ne migliora la struttura.";
+                    document.getElementById("myClay").style.display = "block";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myAci").style.display = "none";
+                    document.getElementById("myBru").style.display = "none";
+                } else if (name == "lim") {
+                    alert("I terreni limosi sono caratterizzati dalla scarsa mobilità degli elementi; risultano spesso mal strutturati, poco permeabili e facili al ristagno. Presentano facilità alla formazione di una crosta superficiale e notevole zollosità. L’aggiunta di sostanza organica migliora la struttura del terreno.");
+                    x.innerHTML = "I terreni limosi sono caratterizzati dalla scarsa mobilità degli elementi; risultano spesso mal strutturati, poco permeabili e facili al ristagno. Presentano facilità alla formazione di una crosta superficiale e notevole zollosità. L’aggiunta di sostanza organica migliora la struttura del terreno.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "block";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myAci").style.display = "none";
+                    document.getElementById("myBru").style.display = "none";
+                } else if (name == 'sab') {
+                    alert("I terreni sabbiosi sono molto permeabili e l’elevata mobilità dei nutrienti rende necessario, soprattutto per l’azoto ed il potassio, il frazionamento della concimazione. La notevole aerazione indirizza i processi evolutivi della sostanza organica verso una rapida mineralizzazione con consistenti rilasci di nutrienti concentrati però in tempi relativamente brevi e non sempre coincidenti con le esigenze colturali delle piante.");
+                    x.innerHTML = "I terreni sabbiosi sono molto permeabili e l’elevata mobilità dei nutrienti rende necessario, soprattutto per l’azoto ed il potassio, il frazionamento della concimazione. La notevole aerazione indirizza i processi evolutivi della sostanza organica verso una rapida mineralizzazione con consistenti rilasci di nutrienti concentrati però in tempi relativamente brevi e non sempre coincidenti con le esigenze colturali delle piante.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "block";
+                    document.getElementById("myAci").style.display = "none";
+                    document.getElementById("myBru").style.display = "none";
+                } else if (name == "calc") {
+                    alert("I terreni calcarei possono rendere il ferro difficile da assimilare. Alcune specie ne risentono, ad esempio le acidofile.");
+                    x.innerHTML = "I terreni calcarei possono rendere il ferro difficile da assimilare. Alcune specie ne risentono, ad esempio le acidofile.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myCalc").style.display = "block";
+                    document.getElementById("myAci").style.display = "none";
+                } else if (name == "aci") {
+                    alert("Ad un pH inferiore a 6,5 si parla di terreno acido. Alcune piante acidofile vogliono valori bassi, compresi tra 4,5 e 5 (rododendri, azalee, ortensie, mirtilli, eriche…). Un pH al di sotto di 4 rende l’insediamento delle piante quasi nullo.");
+                    x.innerHTML = "Ad un pH inferiore a 6,5 si parla di terreno acido. Alcune piante acidofile vogliono valori bassi, compresi tra 4,5 e 5 (rododendri, azalee, ortensie, mirtilli, eriche…). Un pH al di sotto di 4 rende l’insediamento delle piante quasi nullo.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myCalc").style.display = "none";
+                    document.getElementById("myAci").style.display = "block";
+                    document.getElementById("myBru").style.display = "none";
+                } else if (name == "bru") {
+                    alert("Terreno con scarsa ritenzione idrica, senza vegetazione e spesso roccioso e ventoso.");
+                    x.innerHTML = "Terreno con scarsa ritenzione idrica, senza vegetazione e spesso roccioso e ventoso.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myCalc").style.display = "none";
+                    document.getElementById("myAci").style.display = "none";
+                    document.getElementById("myBru").style.display = "block";
+                } else if (name == "col") {
+                    alert("I terreni in collina possono essere profondi con una buona ritenzione idrica in quanto ben areati, oppure umidi e freschi salendo in altitudine e latitudine.");
+                    x.innerHTML = "I terreni in collina possono essere profondi con una buona ritenzione idrica in quanto ben areati, oppure umidi e freschi salendo in altitudine e latitudine.";
+                    document.getElementById("myClay").style.display = "none";
+                    document.getElementById("mySilt").style.display = "none";
+                    document.getElementById("mySand").style.display = "none";
+                    document.getElementById("myCalc").style.display = "none";
+                    document.getElementById("myAci").style.display = "none";
+                    document.getElementById("myBru").style.display = "none";
+                    document.getElementById("myHill").style.display = "block";
+                } else {
+                    x.innerHTML = "Com’è il tuo terreno?";
+                }
+            }
+        </script>
+        <div id="myHill" style="display:none">
+            <h2>Terreno umido di collina</h2>
+            <p>
+                Qualsiasi tipo di terreno in collina o montagna con temperature fresche. Questi son terreni con temperature fresche e 
+                ad umidità media. Presentano una maggiore acidità rispetto ai terreni carbonatici.
+            </p>
+            <p>
+                <a href="https://vivaifrappetta.it/prodotto/quercus-petraea-rovere/" target="_blank"><i>Quercus petrea</i> rovere</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/castagno-marrone-castel-del-rio/" target="_blank">castagno</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/nocciolo-tonda-gentile-delle-langhe/" target="_blank">Nocciolo</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/carpinus-betulus-pyramidalis/" target="_blank"><i>Carpinus betulus</i> carpino bianco</a> miglioratrice del terreno richiede estati calde, luoghi ombreggiati, terreni umidi ma non idromorfi (siepi).</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/aceri/" target="_blank">Aceri</a> Acero campestre (siepi), acero opale.</br>
+                <a href="https://vivaifrappetta.it/categoria-prodotto/alberi/aceri/" target="_blank">Aceri</a> Acero campestre (siepi), acero opale.</br>
+                <a href="https://vivaifrappetta.it/prodotto/celtis-australis-bagolaro-spaccasassi-buzzarago/" target="_blank"><i>Celtis australis</i> bagolaro</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/sorbus-domestica-sorbo-domestico/" target="_blank">Sorbo</a></br>
+                <a href="https://vivaifrappetta.it/prodotto/lonicera-japonica-halliana-caprifoglio-del-giappone/"target="_blank">Lonicera</a>
+            </p>
+        </div>
+        <footer></br></br><i>Work in progress</i></footer></br>
+    </div>
+</body>
+</html>
