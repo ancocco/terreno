@@ -5295,6 +5295,12 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-repeat:no-repeat;
     background-size:contain;
 }
+.backter {
+    background-image: url("../images/large.jpg");
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
 .aci {
     position: relative;
     left: -19em;
