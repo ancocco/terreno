@@ -5304,7 +5304,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .backak {
     background-image: url("../images/vasidikaki.jpg");
     background-position:top;
-    background-repeat:repeat;
+    background-repeat:repeat-x;
     background-size:contain;
 }
 .aci {
