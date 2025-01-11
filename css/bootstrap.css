@@ -5315,6 +5315,13 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-repeat:no-repeat;
     background-size:contain;
 }
+.backflor {
+    background-image: url("../images/floricole.jpg");
+    background-color: #626459;
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
 .aci {
     position: relative;
     left: -19em;
