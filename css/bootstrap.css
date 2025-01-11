@@ -5308,6 +5308,13 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-repeat:no-repeat;
     background-size:contain;
 }
+.backcipr {
+    background-image: url("../images/vasidikaki.jpg");
+    background-color: #626459;
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
 .aci {
     position: relative;
     left: -19em;
