@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Plant Species Database</title>
+  <title>Plant Species Details</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
+      max-width: 800px;
+      margin: auto;
     }
     table {
       width: 100%;
@@ -14,96 +16,22 @@
       margin-top: 20px;
     }
     th, td {
-      border: 1px solid #aaa;
-      padding: 8px;
-      text-align: left;
+      padding: 10px;
+      border: 1px solid #ccc;
       vertical-align: top;
     }
     th {
-      background-color: #e0f7e9;
+      background-color: #f0f9f3;
+      width: 30%;
+      text-align: left;
     }
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
+    td {
+      background-color: #fff;
     }
-    caption {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+    img {
+      max-width: 200px;
+      height: auto;
+      display: block;
     }
-  </style>
-</head>
-<body>
-
-  <h1>Plant Species Database</h1>
-
-  <table>
-    <caption>Plant Species Entry</caption>
-    <thead>
-      <tr>
-        <th>Scientific Name</th>
-        <th>Common Name</th>
-        <th>Family</th>
-        <th>Genus</th>
-        <th>Species</th>
-        <th>Authority</th>
-        <th>Plant Type</th>
-        <th>Height (m)</th>
-        <th>Leaf Type</th>
-        <th>Leaf Arrangement</th>
-        <th>Flower Characteristics</th>
-        <th>Fruit Type</th>
-        <th>Root Type</th>
-        <th>Lifespan</th>
-        <th>Native Range</th>
-        <th>Habitat</th>
-        <th>Elevation Range (m)</th>
-        <th>Soil Preferences</th>
-        <th>Sunlight Requirements</th>
-        <th>Pollinators</th>
-        <th>Edibility</th>
-        <th>Medicinal Uses</th>
-        <th>Other Uses</th>
-        <th>IUCN Status</th>
-        <th>Protected Status</th>
-        <th>Threats</th>
-        <th>Image</th>
-        <th>References</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><i>Rosa canina</i></td>
-        <td>Dog Rose</td>
-        <td>Rosaceae</td>
-        <td>Rosa</td>
-        <td>canina</td>
-        <td>L.</td>
-        <td>Shrub</td>
-        <td>1–3</td>
-        <td>Compound</td>
-        <td>Alternate</td>
-        <td>Pink flowers, 5 petals</td>
-        <td>Achene</td>
-        <td>Taproot</td>
-        <td>Perennial</td>
-        <td>Europe</td>
-        <td>Hedgerows, woodland edges</td>
-        <td>0–1500</td>
-        <td>Well-drained loam</td>
-        <td>Full sun</td>
-        <td>Bees</td>
-        <td>Yes – hips edible</td>
-        <td>Vitamin C rich hips used in teas</td>
-        <td>Ornamental, erosion control</td>
-        <td>Least Concern</td>
-        <td>None</td>
-        <td>Habitat loss from agriculture</td>
-        <td><img src="https://example.com/rosa_canina.jpg" alt="Rosa canina" width="100"></td>
-        <td>Kew Gardens, Flora Europaea</td>
-        <td>Thorns; traditional hedgerows</td>
-      </tr>
-    </tbody>
-  </table>
-
-</body>
-</html>
+    h1 {
+      text-align:
