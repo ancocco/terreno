@@ -5301,6 +5301,12 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-repeat:no-repeat;
     background-size:contain;
 }
+.backsub {
+    background-image: url("../images/headsubstrati.jpg");
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
 .backak {
     background-image: url("../images/vasidikaki.jpg");
     background-color: #626459;
