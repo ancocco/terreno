@@ -5328,6 +5328,13 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-repeat:no-repeat;
     background-size:contain;
 }
+.backpeat {
+    background-image: url("../images/torbiera.jpg");
+    background-color: #626459;
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
 .aci {
     position: relative;
     left: -19em;
@@ -10339,3 +10346,4 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
